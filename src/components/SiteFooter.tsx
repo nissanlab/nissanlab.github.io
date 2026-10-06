@@ -82,13 +82,15 @@ export default function SiteFooter() {
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-line pt-8">
           <div className="flex items-center gap-6">
-            <Image
-              src="/images/logos/huji-horizontal.png"
-              alt={site.university}
-              width={1738}
-              height={591}
-              className="h-10 w-auto"
-            />
+            <a href={site.universityUrl} rel="noreferrer noopener" target="_blank">
+              <Image
+                src="/images/logos/huji-horizontal.png"
+                alt={site.university}
+                width={1738}
+                height={591}
+                className="h-10 w-auto"
+              />
+            </a>
             <Image
               src="/images/logos/faculty-agriculture.png"
               alt={site.faculty}

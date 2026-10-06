@@ -40,14 +40,16 @@ export default function SiteHeader() {
       <Container width="wide" className="flex h-[76px] items-center gap-5 md:h-[92px] md:gap-8">
         {/* Institutional lockup */}
         <div className="hidden shrink-0 items-center gap-5 pr-6 md:flex md:border-r md:border-line">
-          <Image
-            src="/images/logos/huji-horizontal.png"
-            alt={site.university}
-            width={1738}
-            height={591}
-            className="h-10 w-auto lg:h-12"
-            priority
-          />
+          <a href={site.universityUrl} rel="noreferrer noopener" target="_blank">
+            <Image
+              src="/images/logos/huji-horizontal.png"
+              alt={site.university}
+              width={1738}
+              height={591}
+              className="h-10 w-auto lg:h-12"
+              priority
+            />
+          </a>
         </div>
 
         {/* Lab lockup */}

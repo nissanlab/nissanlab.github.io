@@ -10,6 +10,7 @@ export const site = {
   department: "Department of Soil and Water Sciences",
   faculty: "Faculty of Agriculture, Food and Environment",
   university: "The Hebrew University of Jerusalem",
+  universityUrl: "https://new.huji.ac.il/",
   description:
     "The Terrestrial Physics Lab studies how water shapes the fate of organic matter in soil, at scales from the pore space up to the global land surface. Our work combines microfluidic soil analogs, instrumented soil mesocosms, whole soil profiles, transport theory and global soil datasets.",
   url: "https://nissanlab.github.io",
