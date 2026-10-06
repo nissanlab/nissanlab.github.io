@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Raw microscopy source footage (110 MB); the encoded hero clip lives in public/videos
+/Vids/
+
+# Raw source images; the processed versions live in public/
+/Daniel_Nadav .jpg
+/Licors.png
+/high vs low.png
+/plant_noBacteria_raw_Ph1_first20h.gif
+/root_microbes_img.png

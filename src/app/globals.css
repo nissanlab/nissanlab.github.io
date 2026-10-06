@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------------------
+   Design tokens.
+   The whole site is themed from here. To change the accent colour, change
+   --color-brand (and its two variants) and nothing else.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-brand: #1fa06f;
+  --color-brand-hover: #16764f;
+  --color-brand-ink: #187c55;
+  --color-brand-tint: #e0f1ec;
+  --color-brand-wash: #f0f8f5;
+
+  --color-bg: #f7fbfa;
+  --color-surface: #ffffff;
+  --color-band: #f4f7f6;
+
+  --color-text: #23272a;
+  --color-text-2: #5b6266;
+  --color-text-3: #697277;
+  --color-line: #e3e9e7;
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-card: 1rem;
+  --radius-media: 1.25rem;
+  --radius-hero: 2.5rem;
+
+  --shadow-card: 0 1px 2px rgba(23, 43, 37, 0.04), 0 8px 24px -12px rgba(23, 43, 37, 0.14);
+  --shadow-float: 0 2px 6px rgba(23, 43, 37, 0.06), 0 18px 48px -20px rgba(23, 43, 37, 0.24);
+
+  --text-hero: clamp(2rem, 4.6vw, 3rem);
+  --text-title: clamp(1.6rem, 3vw, 2.25rem);
+  --text-section: clamp(1.35rem, 2.2vw, 1.75rem);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-tint);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Body copy inside content blocks. */
+@utility copy {
+  color: var(--color-text-2);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+
+  & p + p {
+    margin-top: 0.9em;
+  }
+
+  & a {
+    color: var(--color-brand-ink);
+    text-decoration: none;
+  }
+
+  & a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (width >= 48rem) {
+    font-size: 1rem;
+  }
+}
+
+/* The pill button used for the single primary action on a page. */
+@utility btn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--color-brand-ink);
+  padding: 0.5rem 1.15rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color 0.18s ease;
+
+  &:hover {
+    background-color: var(--color-brand-hover);
+  }
+}
+
+/* Quiet inline "Read more ›" link. */
+@utility link-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-brand-ink);
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }
