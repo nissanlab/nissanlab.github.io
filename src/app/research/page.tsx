@@ -36,9 +36,8 @@ export default function ResearchPage() {
                   href={theme ? `#${theme.id}` : undefined}
                   className="group flex h-full flex-col rounded-card bg-surface p-5 shadow-card transition-shadow hover:shadow-float focus-visible:outline-offset-4"
                 >
-                  <span className="flex items-baseline justify-between gap-3 text-xs font-semibold tracking-[0.14em] text-brand uppercase">
-                    <span className="tabular-nums">{theme?.number}</span>
-                    <span className="tracking-normal normal-case tabular-nums">{scale.length}</span>
+                  <span className="block text-xs font-semibold text-brand tabular-nums">
+                    {scale.length}
                   </span>
                   <span className="mt-1 flex min-h-[2.5em] items-end leading-tight font-bold text-text group-hover:text-brand">
                     {scale.name}
