@@ -56,6 +56,12 @@ The directory falls back to initials until a photograph is added.
 | `public/images/logos/faculty-agriculture.png` | `.../mylab` footer | Robert H. Smith Faculty of Agriculture, Food and Environment logo. Institutional use. Margins trimmed. | Footer |
 | `public/images/logos/huji-vertical.png` | `.../mylab` footer | As above. Not currently placed; kept for future use. | — |
 
+## Files
+
+| File | Source | Used on |
+| --- | --- | --- |
+| `public/files/fccf-phd-position.pdf` | Lab-made call for applications (`FCCF_PhD_Position.pdf`), carries the FCCF, HUJI and Faculty logos | Opportunities — funded PhD position |
+
 ## Type
 
 | Asset | Source | Licence |

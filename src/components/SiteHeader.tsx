@@ -22,7 +22,7 @@ export default function SiteHeader() {
         menuButton.current?.focus();
       }
     };
-    const desktop = window.matchMedia("(min-width: 1024px)");
+    const desktop = window.matchMedia("(min-width: 1280px)");
     const onResize = () => { if (desktop.matches) setOpen(false); };
     window.addEventListener("keydown", onKeyDown);
     desktop.addEventListener("change", onResize);
@@ -63,7 +63,7 @@ export default function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Main" className="ml-auto hidden lg:block">
+        <nav aria-label="Main" className="ml-auto hidden xl:block">
           <ul className="flex items-center gap-7">
             {nav.map((item) => {
               const active = isActive(item.href);
@@ -90,7 +90,7 @@ export default function SiteHeader() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-nav"
-          className="ml-auto flex size-11 shrink-0 items-center justify-center rounded-full text-text lg:hidden"
+          className="ml-auto flex size-11 shrink-0 items-center justify-center rounded-full text-text xl:hidden"
         >
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
           <span aria-hidden className="flex h-3.5 w-5 flex-col justify-between">
@@ -114,7 +114,7 @@ export default function SiteHeader() {
       </Container>
 
       {open ? (
-        <div id="mobile-nav" className="max-h-[calc(100dvh-76px)] overflow-y-auto border-t border-line bg-surface lg:hidden">
+        <div id="mobile-nav" className="max-h-[calc(100dvh-76px)] overflow-y-auto border-t border-line bg-surface xl:hidden">
           <Container width="wide" className="py-2">
             <nav aria-label="Main (mobile)">
               <ul className="divide-y divide-line">

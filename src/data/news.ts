@@ -35,6 +35,7 @@ export const news: NewsItem[] = [
     category: "opportunity",
     title: "PhD and postdoc positions",
     body: "We are looking for highly motivated PhD students and postdocs to join the lab. To apply, email alon.nissan@mail.huji.ac.il with your CV.",
+    link: { href: "/opportunities", label: "Open positions and fellowships" },
   },
   // Examples of the other categories (copy, fill in and uncomment):
   // {
