@@ -22,6 +22,10 @@ export const positions: Position[] = [
     flyer: "/files/fccf-phd-position.pdf",
     link: { href: "https://www.fccf-center.org", label: "FCCF Center" },
   },
+  {
+    title: "PhD student, from photosynthesis to rhizosphere respiration",
+    body: "How the carbon a plant fixes by day becomes microbial respiration around its roots. Root exudates measured across the day–night cycle, and living roots imaged in microfluidic chips.",
+  },
 ];
 
 export type Fellowship = {
