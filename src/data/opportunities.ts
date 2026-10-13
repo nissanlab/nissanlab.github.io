@@ -24,7 +24,7 @@ export const positions: Position[] = [
   },
   {
     title: "PhD student, from photosynthesis to rhizosphere respiration",
-    body: "How the carbon a plant fixes by day becomes microbial respiration around its roots. Root exudates measured across the day–night cycle, and living roots imaged in microfluidic chips.",
+    body: "How the carbon a plant fixes by day becomes microbial respiration around its roots. Root exudates measured across the day–night cycle.",
   },
 ];
 
